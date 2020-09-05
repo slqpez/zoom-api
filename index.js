@@ -1,13 +1,11 @@
 const express = require("express");
 const app = express();
+const home = require("./routes/home.js")
 
 const port = process.env.PORT || 3000;
 
 
-app.get("/", (req, res) => {
-    res.send("buenas")
-
-})
+app.use(home)
 
 
 app.listen(port, () => {
